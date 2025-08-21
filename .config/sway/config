@@ -22,6 +22,14 @@ set $menu "rofi -show drun"
 
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 exec swaybg -i /mnt/hardisk/wallpapers/sway_wallpaper.png -m fill
+
+default_border pixel 1
+
+
+gaps inner 5
+gaps outer 5
+
+
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0

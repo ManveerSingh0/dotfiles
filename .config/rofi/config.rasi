@@ -180,6 +180,6 @@ configuration {
 */
 }
 //@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
-@theme "/home/prtyksh/.config/rofi/launchers/type-3/style-5.rasi"
+@theme "/home/manveer/.config/rofi/launchers/type-2/style-1.rasi"
 
 //@theme "wpg.rasi"

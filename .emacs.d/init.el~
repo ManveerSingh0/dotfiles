@@ -56,13 +56,11 @@
 
 
 
-(use-package catppuccin-theme
-  :ensure t
-  :config
-  ;; This code now runs AFTER the package is installed.
-  ;; You can choose 'catppuccin-latte, 'catppuccin-frappe, etc.
-  (load-theme 'catppuccin t))
 
+
+
+(use-package catppuccin-theme
+  :ensure t)
 
 
 
@@ -73,36 +71,11 @@
 
 
 
-(use-package windmove
-  :bind (("C-c ;" . windmove-right)
-         ("C-c j" . windmove-left)
-         ("C-c k" . windmove-down)
-         ("C-c l" . windmove-up)))
+(load-theme 'catppuccin t)
 
 
 
-
-
-(use-package eglot
-  :ensure t
-  :hook
-  (c++-mode . 'eglot-ensure)
-  (emacs-lisp-mode . 'eglot-ensure))
-
-(use-package smartparens
-  :ensure t
-  :hook
-  (c++-mode . 'smartparens-mode)
-  (emacs-lisp-mode . 'smartparens-mode))
-
-(use-package company-mode
-  :ensure t
-  :hook
-  (c++-mode . 'company-mode)
-  (emacs-lisp-mode . 'company-mode))
-
-(use-package vterm
-  :ensure t)
-
-
-
+(keymap-global-set "C-c ;" 'windmove-right) 
+(keymap-global-set "C-c j" 'windmove-left)
+(keymap-global-set "C-c k" 'windmove-down)
+(keymap-global-set "C-c l" 'windmove-up)
