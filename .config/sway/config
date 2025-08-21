@@ -21,7 +21,7 @@ set $menu "rofi -show drun"
 ### Output configuration
 
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-exec swaybg -i /mnt/hardisk/wallpapers/github_wallpapers_repo/Wallpapers/girl-roof.jpg -m fill
+exec swaybg -i /mnt/hardisk/wallpapers/sway_wallpaper.png -m fill
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
