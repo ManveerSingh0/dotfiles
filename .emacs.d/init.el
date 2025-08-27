@@ -40,38 +40,18 @@
   ;; Enable use-package :ensure support for Elpaca.
   (elpaca-use-package-mode))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+;; --- Theme ---
 (use-package catppuccin-theme
   :ensure t
   :config
-  ;; This code now runs AFTER the package is installed.
-  ;; You can choose 'catppuccin-latte, 'catppuccin-frappe, etc.
+  ;; Load the theme after it's installed.
+  ;; Choose your favorite flavor: latte, frappe, macchiato, or mocha
   (load-theme 'catppuccin t))
 
-
-
-
-
+;; --- Basic UI & Keybindings ---
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-
-
 
 (use-package windmove
   :bind (("C-c ;" . windmove-right)
@@ -79,30 +59,32 @@
          ("C-c k" . windmove-down)
          ("C-c l" . windmove-up)))
 
+;; --- Programming & Development ---
+(setq make-backup-files nil)
 
 
 
+(add-hook 'c++-mode-hook 'display-line-numbers-mode)
+(add-hook 'emacs-lis-mode-hook 'display-line-numbers-mode)
 
 (use-package eglot
   :ensure t
-  :hook
-  (c++-mode . 'eglot-ensure)
-  (emacs-lisp-mode . 'eglot-ensure))
+  ;; Correct hook syntax: (mode . function)
+  :hook ((c++-mode . eglot-ensure)
+         (emacs-lisp-mode . eglot-ensure)))
+
+(use-package flymake
+  :ensure t)
 
 (use-package smartparens
   :ensure t
-  :hook
-  (c++-mode . 'smartparens-mode)
-  (emacs-lisp-mode . 'smartparens-mode))
+  :hook ((c++-mode . smartparens-mode)
+         (emacs-lisp-mode . smartparens-mode)))
 
-(use-package company-mode
+(use-package company
   :ensure t
-  :hook
-  (c++-mode . 'company-mode)
-  (emacs-lisp-mode . 'company-mode))
+  :hook ((c++-mode . company-mode)
+         (emacs-lisp-mode . company-mode)))
 
 (use-package vterm
   :ensure t)
-
-
-
