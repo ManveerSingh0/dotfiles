@@ -13,5 +13,9 @@
 	"clock": {
 		 "interval": 60,
 		 "format": "{:%I:%M}"	 
+	},
+	"network":{
+		"format-wifi" :"    {essid}",
+		"format-ethernet": "{ipaddr}/{cidr} 󰊗"
 	}
 }

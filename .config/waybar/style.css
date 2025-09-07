@@ -10,13 +10,13 @@ window#waybar{
 #network
 {
     background-color: #1e1e2e;
-    padding: 2px 10px;        
+    padding: 2px 10px;
     margin: 3px 3px;          
     border-radius: 6px;
 }
 
 
 #workspaces button.focused{
-    background-color: #BF40BF;
+    background-color: #50C878;
     color: #1e1e2e; 
 } 

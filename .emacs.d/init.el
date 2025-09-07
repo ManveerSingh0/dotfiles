@@ -88,3 +88,7 @@
 
 (use-package vterm
   :ensure t)
+(use-package pdf-tools
+  :ensure t)
+
+
