@@ -23,11 +23,11 @@ set $menu "rofi -show drun"
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 exec swaybg -i /mnt/hardisk/wallpapers/sway_wallpaper.png -m fill
 
-default_border pixel 1
+default_border pixel 3
 
 
-gaps inner 5
-gaps outer 5
+#gaps inner 5
+#gaps outer 5
 
 
 # Example configuration:
@@ -79,6 +79,7 @@ gaps outer 5
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+Shift+d exec "rofi -show window"
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
